@@ -1,0 +1,63 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "loto", sans-serif;
+}
+body{
+    background: url(./image/question-question-mark-red-black-wallpaper-preview.jpg)no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:whitesmoke;
+}
+.accordion{
+    width: 70%;
+    background-color: black;
+    padding: 30px;
+    border-radius: 30px;
+}
+.head{
+    margin-bottom:30px;
+    text-align: center;
+}
+.accordion .CONTENT-CONTAINER .QUESTION{
+    font-size: 20px;
+    padding: 10px 0;
+    cursor: pointer;
+    border-bottom:1px solid wheat ;
+    position: relative;
+}
+.accordion .CONTENT-CONTAINER .QUESTION::after{
+    content: "+";
+    position: absolute;
+    right: -5px;
+}
+.accordion .CONTENT-CONTAINER .ANSWER{
+    padding-top: 15PX;
+    line-height: 1.5;
+    width: 100%;
+
+
+    height: 0PX;
+    overflow: hidden;
+    transition: .5S;
+}
+
+
+
+
+.accordion .CONTENT-CONTAINER.active .ANSWER{  /* .active sjld write ithout space*/
+    height: 150px;
+}
+.accordion .CONTENT-CONTAINER.active .QUESTION{
+    font-size: 18PX;
+    transition: .4S;
+}
+.accordion .CONTENT-CONTAINER.active .QUESTION::after{
+    content: "-";
+    font-size: 32PX;
+    transition: .5S;
+}
